@@ -11,8 +11,8 @@ namespace Desafio_Covid19
     {
         static void Main(string[] args)
         {
-            Parâmetros.PessoaInfectada ='I';
-            Parâmetros.PessoaSaudável ="-";
+            Parâmetros.PessoaInfectada ='_';
+            Parâmetros.PessoaSaudável ="|";
             Parâmetros.Tempo =60;
 
             var resp = Parâmetros.Resposta1();
@@ -46,22 +46,23 @@ namespace Desafio_Covid19
                 {
                     if (k == localização.Item1) 
                     {
-                        string linha = lista[k];
-                        char[] linhaarray = linha.ToCharArray();
+                        char[] linhaarray = lista[k].ToCharArray();
                         Console.ForegroundColor = ConsoleColor.Red;
                         for (var j =0; j< calculo.Pessoas; j++) 
                         {
                             if (j == localização.Item2) 
                             {
                                 linhaarray[j] = Parâmetros.PessoaInfectada ;
-                                linha = new string(linhaarray);
+                                lista[k] = new string(linhaarray);
                             }
                         }
-                        lista[k] = linha;
-                        Console.WriteLine(lista[k]);
+                        Console.WriteLine($"Estado {k}\t {lista[k]}");
                     }
-                    Console.ResetColor();
-                    Console.WriteLine(lista[k]);
+                    else 
+                    {
+                        Console.ResetColor();
+                        Console.WriteLine($"Estado {k}\t {lista[k]}");
+                    }
                 }
                 
                 Thread.Sleep(1000);
