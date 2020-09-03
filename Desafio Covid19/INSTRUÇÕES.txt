@@ -1,0 +1,68 @@
+﻿O governo federal Brasileiro, precisa monitorar os casos de COVID 19 nos estados.
+O Usuário deverá informar o números de estados que deseja monitorar e a amostragem por
+pessoas.
+O usuário irá informa apenas o número de estados e em seguida o número de pessoas por
+estado.
+O Sistema deverá imprimir na tela o número de linhas de acordo com o número de estados
+informados pelo usuário.
+Em cada linha deverá conter exatamente o número de pessoas informado pelo usuário.
+Cada pessoa deve ser representada por um carácter.
+Devemos definir um carácter para pessoa saudável e um carácter diferente para pessoa
+infectada.
+O sistema deverá monitorar por tempo determinado de 60 segundos.
+Cada vez que uma pessoa é infectada, deverá modificar a cor da linha para vermelha e trocar
+um carácter de pessoa saudável para infectada.
+Deverá ter um intervalo de 1 segundo a cada nova alteração de lista.
+Devemos ter 3 classes, a program não entra na contagem
+- Monitoramento
+- Calculo
+- Parâmetros
+A classe "Monitoramento" deve ser publica e conter duas propriedades
+- Quantidade de estados com tipo inteiro
+- Quantidade de pessoas com tipo inteiro
+A classe "Calculo" deve ser publica e deve herdar de "Monitoramento"
+Deverá conter um único método com retorno de dois inteiros
+O método deverá gerar um número aleatório
+Esse número não pode passar da quantidade de pessoas monitoradas em todos os estados
+Deverá calcular a linha em que o número gerado se encontra
+Deverá calcular a posição da pessoa na linha encontrada
+Deverá retornar o número da linha e a posição da pessoa infectada
+A classe "Parametros" deve ser publica e estática.
+Todos os métodos e propriedades devem ser estáticos
+Deve conter 3 propriedades
+- Carácter pessoa saudável
+- Carácter pessoa infectada
+- tempo em segundos
+Deverá conter 5 métodos privados
+- método com retorno string que contem a pergunta "Quantos estados deseja monitorar?"
+Deve retornar a resposta do usuário
+- método com retorno string que contem a pergunta "Quantas pessoas deseja monitorar?"
+Deve retornar a resposta do usuário
+- método sem retorno, deve ser um método de extensão com parâmetro string, Imprimir o
+erro na tela
+Deve imprimir no console o erro de acordo com as validações de entrada do usuário
+- método com retorno verdadeiro ou falso que valida se a entrada do usuário é um número
+- método com retorno inteiro que representa o questionário Secundário
+Deverá chamar a pergunta 2 "Quantas pessoas..."
+Se não for um número deve apresentar para o usuário o erro "Digite um número"
+Aguardar 1 segundo e chamar o método questionário Secundário novamente
+Deverá conter 1 métodos públicos com retornos de inteiros
+- método com retorno de dois inteiros que representa o questionário inicial
+Deverá chamar a pergunta 1 "Quantos estados..."
+Se não for um número deve apresentar para o usuário o erro "Digite um número"
+Aguardar 1 segundo e chamar o método questionário inicial novamente
+Se for um número e maior que o número máximo de estados Brasileiros, deve apresentar para
+o usuário o erro "No Brasil temos apenas 27 estados"
+Aguardar 1 segundo e chamar o método questionário inicial novamente
+Deve chamar o método privado questionário Secundário que será um dos retornos.
+Na PROGRAM iniciar as propriedades da classe "Parametos"
+Chamar o questionário inicial com tipo publico da classe "Parametros"
+Instanciar a classe "Calculo" com os valores retornados no método do questionário inicial
+Imprimir no console a listagem de todas as pessoas não infectadas e aguardar 1 segundo para
+começar a localizar os infectados
+Criar a lógica de apresentação para o usuário e utilizar o método "LocalizaInfectado" da classe
+"Calculo"
+REFATORAR...
+REFATORAR...
+REFATORAR...
+REFATORAR...
